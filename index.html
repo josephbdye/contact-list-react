@@ -45,7 +45,6 @@
   }
 
   const Contacts = ({ companies, selectedId })=> {
-    console.log(selectedId);
     return (
       <ul>
         {
@@ -73,8 +72,7 @@
   function App(){
     const [companies, setCompanies] = useState([]);
     const [selectedId, setSelectedId] = useState(window.location.hash.slice(1));
-    console.log(selectedId);
-
+    
     useEffect(()=> {
       window.addEventListener('hashchange', ()=> {
         setSelectedId(window.location.hash.slice(1));
